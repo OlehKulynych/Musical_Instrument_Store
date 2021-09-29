@@ -1,0 +1,23 @@
+﻿
+
+<h2>Список всіх товарів</h2>
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+
+
+        @{
+            foreach (var musicalinstrument in Model.GetAllMusicalInstruments)
+            {
+                <div class="col-lg-4 border border-5 m-3" style="height: 600px">
+                    <p><b>Назва: </b> @musicalinstrument.nameMI</p>
+                    <img class="img-thumbnail" src="@musicalinstrument.img" alt="Photo" style="height: 300px" />
+                    <p><b>Опис: </b> @musicalinstrument.descMI</p>
+                    <p><b>Ціна: </b> @musicalinstrument.price.ToString("c")</p>
+                </div>
+            }
+        }
+    </div>
+
+
+
+</div>
